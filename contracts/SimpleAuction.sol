@@ -111,7 +111,7 @@ contract SimpleAuction {
     /// to the beneficiary.
     function auctionEnd() external {
         // It is a good guideline to structure functions that interact
-        // with other contracts (i.e. they call functions or send Ether)
+        // with other contracts (i.e. they call fut5nctions or send Ether)
         // into three phases:
         // 1. checking conditions
         // 2. performing actions (potentially changing conditions)
@@ -132,6 +132,7 @@ contract SimpleAuction {
         // 2. Effects
         ended = true;
         emit AuctionEnded(highestBidder, highestBid);
+        
 
         // 3. Interaction
         beneficiary.transfer(highestBid);
